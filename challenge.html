@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>⚔️ 人生支線 — 你敢唔敢？</title>
+<style>
+body{background:#14102B;color:#EFE9D9;font-family:-apple-system,"PingFang HK",sans-serif;
+display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:90vh;
+text-align:center;padding:24px;line-height:1.6}
+h1{color:#FFB938;font-size:1.6em;margin:0 0 8px}
+p{color:#A79FCE;margin:6px 0}
+a.btn{display:inline-block;margin-top:18px;background:#FFB938;color:#000;font-weight:700;
+padding:14px 26px;text-decoration:none;border:3px solid #000;box-shadow:4px 4px 0 #000}
+.hint{font-size:.85em;margin-top:22px;color:#A79FCE}
+</style></head><body>
+<h1>⚔️ 有人挑戰你</h1>
+<p>接唔接受，係你嘅選擇。</p>
+<a class="btn" id="openBtn" href="#">接受挑戰</a>
+<p class="hint">未裝App？喺 App Store 搜尋「<b style="color:#FFB938">人生支線</b>」，裝完再撳一次條link。</p>
+<script>
+var q = new URLSearchParams(location.search).get("q") || "";
+var deep = "sidequest://quest/" + encodeURIComponent(q);
+document.getElementById("openBtn").href = deep;
+if (q) { setTimeout(function () { location.href = deep; }, 400); }
+</script>
+</body></html>
